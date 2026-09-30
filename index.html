@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vértice — oficina de precisão</title>
+<meta name="description" content="Oficina especializada em carros premium e esportivos: diagnóstico, manutenção e estética com acompanhamento transparente.">
+<!--
+  VÉRTICE — adaptação do modelo cinema-scroll (NOVA FX) pra uma oficina de luxo.
+  Conceito, paleta, objeto 3D e textos criados junto com o Astra (Codex).
+  Fotos: Pixabay (ver img/CREDITOS.txt). Marca fictícia.
+-->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect width=%2724%27 height=%2724%27 rx=%276%27 fill=%27%230b0e11%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%277%27 fill=%27none%27 stroke=%27%23f08058%27 stroke-width=%272%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%272%27 fill=%27%23f08058%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="engine/cinema.css">
+<link rel="stylesheet" href="theme.css">
+<script src="js/debug.js"></script>
+</head>
+<body>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#hero" aria-label="Vértice, início">
+    <svg viewBox="-12 -12 24 24" aria-hidden="true"><g class="brand-rotor"></g></svg>
+    <span>Vértice</span>
+  </a>
+  <nav class="nav-pill" aria-label="Principal">
+    <a href="#intro">Oficina</a>
+    <a href="#devices">Portal</a>
+    <a href="#bloom">Padrão</a>
+    <a href="#gallery">Por dentro</a>
+    <a href="#final">Contato</a>
+  </nav>
+  <a class="nav-cta" href="#final">Agendar avaliação</a>
+</header>
+
+<main>
+
+  <!-- 1 · HERO -->
+  <section id="hero" class="hero">
+    <img class="hero-photo" src="img/hero-silhueta.jpg" alt="" aria-hidden="true">
+    <p class="hero-eyebrow"><span class="dot"></span> Vértice · oficina de precisão</p>
+    <div class="hero-foot">
+      <p class="hero-lead">O cuidado à altura<br>da máquina.</p>
+      <p class="scroll-hint"><span>Role</span><i></i></p>
+    </div>
+  </section>
+
+  <!-- 2 · PAINEL -->
+  <section id="intro" class="intro">
+    <div class="sticky">
+      <div class="panel" id="panel">
+        <div class="panel-copy">
+          <p class="chip"><span class="dot"></span> Carros premium e esportivos</p>
+          <h1 class="two-tone" id="headline">
+            <span class="t1">Precisão em cada ajuste.</span>
+            <span class="t2">Confiança a cada quilômetro.</span>
+          </h1>
+          <p class="panel-sub">Diagnóstico, manutenção e cuidado estético, com um plano claro para o que o seu carro precisa — antes de qualquer serviço começar.</p>
+          <div class="panel-actions">
+            <a class="btn btn-light" href="#final">Agendar avaliação</a>
+            <a class="btn btn-ghost" href="#gallery">Conhecer os serviços <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <ul class="panel-meta">
+          <li><b data-count="5" data-pad="2">05</b><span>especialidades sob o mesmo teto</span></li>
+          <li><b data-count="100" data-suffix="%">100%</b><span>das etapas registradas em foto</span></li>
+          <li><b data-count="360" data-suffix="°">360°</b><span>de cuidado com o carro</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · FOLHA CLARA + PORTAL DO CLIENTE -->
+  <section id="devices" class="devices">
+    <div class="dv-stage">
+      <div class="dv-sheet" id="dvSheet">
+        <div class="dv-marquee" aria-hidden="true">
+          <div class="dv-track" id="dvTrack">
+            <span>Cada etapa</span><span class="spark">◆</span><span>às claras</span><span class="spark">◆</span>
+            <span>Cada etapa</span><span class="spark">◆</span><span>às claras</span><span class="spark">◆</span>
+          </div>
+        </div>
+        <p class="sr-only">Cada etapa, às claras.</p>
+        <p class="dv-copy" id="dvCopy">Você acompanha. Nós cuidamos.<br><span>Do diagnóstico à entrega: o que será feito, por quê e quando.</span></p>
+      </div>
+
+      <div class="phones">
+        <!-- 1 · seu veículo -->
+        <article class="phone">
+          <div class="screen s-car">
+            <div class="sb"><span>9:41</span><span class="sb-i"></span></div>
+            <p class="s-kicker">Portal Vértice</p>
+            <p class="s-title">Seu cupê</p>
+            <img src="img/p1-veiculo.jpg" alt="">
+            <dl class="kv"><div><dt>Quilometragem</dt><dd>18.420 km</dd></div><div><dt>Próxima visita</dt><dd>qui · 10:30</dd></div></dl>
+            <span class="s-btn">Ver histórico</span>
+          </div>
+        </article>
+        <!-- 2 · diagnóstico -->
+        <article class="phone">
+          <div class="screen s-diag">
+            <div class="sb"><span>9:41</span><span class="sb-i"></span></div>
+            <p class="s-title">Diagnóstico</p>
+            <img src="img/p2-diagnostico.jpg" alt="">
+            <ul class="checks">
+              <li><i class="ok"></i>Suspensão<b>Em ordem</b></li>
+              <li><i class="ok"></i>Pneus<b>Em ordem</b></li>
+              <li><i class="rec"></i>Pastilhas<b>Recomendado</b></li>
+              <li><i class="att"></i>Fluido de freio<b>Atenção</b></li>
+            </ul>
+          </div>
+        </article>
+        <!-- 3 · seu plano (vira cortina) -->
+        <article class="phone" id="phoneHero">
+          <div class="screen s-plan">
+            <div class="sb curtain-fade"><span>9:41</span><span class="sb-i"></span></div>
+            <p class="s-kicker curtain-fade">Aguardando sua aprovação</p>
+            <p class="s-title curtain-fade">Seu plano</p>
+            <ul class="plan curtain-fade">
+              <li>Fluido de freio<b>R$ 480</b></li>
+              <li>Pastilhas dianteiras<b>R$ 2.350</b></li>
+              <li>Alinhamento 3D<b>R$ 390</b></li>
+            </ul>
+            <p class="plan-total curtain-fade">Prazo: 1 dia útil<b>R$ 3.220</b></p>
+            <span class="s-btn dark curtain-fade">Aprovar serviços</span>
+          </div>
+        </article>
+        <!-- 4 · em serviço -->
+        <article class="phone">
+          <div class="screen s-work">
+            <div class="sb"><span>9:41</span><span class="sb-i"></span></div>
+            <p class="s-title">Em serviço</p>
+            <img src="img/p4-servico.jpg" alt="">
+            <ol class="steps">
+              <li class="done">Recepção</li>
+              <li class="done">Diagnóstico</li>
+              <li class="now">Execução</li>
+              <li>Teste de rodagem</li>
+              <li>Entrega</li>
+            </ol>
+          </div>
+        </article>
+        <!-- 5 · pronto -->
+        <article class="phone">
+          <div class="screen s-ready">
+            <div class="sb"><span>9:41</span><span class="sb-i"></span></div>
+            <p class="s-kicker">Tudo certo</p>
+            <p class="s-title">Pronto para sair</p>
+            <p class="ready-big">3<small>serviços concluídos</small></p>
+            <p class="ready-note">24 fotos no relatório · garantia registrada</p>
+            <span class="s-btn">Ver relatório</span>
+            <span class="s-btn ghost">Agendar retirada</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · FLORESCER -->
+  <section id="bloom" class="bloom">
+    <div class="sticky">
+      <p class="bloom-cap" id="bloomCap"><span class="idx">PADRÃO VÉRTICE</span> Milhares de detalhes.<br>Um só padrão de cuidado.</p>
+      <p class="bloom-side" id="bloomSide">Cada ponto é um item conferido antes de o carro voltar para você — do torque de uma roda ao último reflexo da pintura.</p>
+    </div>
+  </section>
+
+  <!-- 5 · STATEMENT -->
+  <section id="statement" class="statement">
+    <div class="sticky">
+      <h2 class="st-a" id="stA">Alta</h2>
+      <p class="st-note" id="stNote">Na técnica. No atendimento. Na entrega.</p>
+      <h2 class="st-b" id="stB">precisão.</h2>
+    </div>
+  </section>
+
+  <!-- 6 · GALERIA -->
+  <section id="gallery" class="gallery">
+    <div class="sticky">
+      <div class="g-hud" id="gHud">
+        <p class="g-count"><b id="gIdx">01</b> / <span id="gTot">14</span></p>
+        <p class="g-title" id="gTitle">Chegada</p>
+      </div>
+      <p class="g-head" id="gHead">Por dentro do cuidado</p>
+    </div>
+  </section>
+
+  <!-- 7 · FECHAMENTO -->
+  <section id="final" class="final">
+    <div class="sticky">
+      <div class="final-copy" id="finalCopy">
+        <p class="chip"><span class="dot"></span> Agenda aberta para avaliações</p>
+        <h2>Seu carro merece<br><em>cuidado à altura.</em></h2>
+        <p>Conte o que o seu carro precisa. Nossa equipe orienta o próximo passo.</p>
+        <div class="panel-actions">
+          <a class="btn btn-light" href="#hero">Agendar avaliação</a>
+          <a class="btn btn-ghost" href="#hero">Conversar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Vértice — oficina de precisão · estudo de interface. Fotos: Pixabay.</p>
+  <nav aria-label="Rodapé"><a href="#intro">Oficina</a><a href="#gallery">Por dentro</a><a href="#final">Contato</a></nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+  "nova/": "./fx/" } }
+</script>
+<script type="module" src="site.js"></script>
+</body>
+</html>
