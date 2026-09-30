@@ -15,7 +15,7 @@ g11-ferramental 2017/11/16/13/32/tool-2954611
 g12-chegada 2017/07/21/20/16/lamborghini-2526985
 g13-detalhamento 2016/11/18/23/04/cleaning-1837331
 g14-entrega 2018/06/28/22/14/car-3504910
-hero-silhueta 2016/11/23/17/16/automobile-1853893
+hero-silhueta 2016/11/23/17/16/automobile-1853893  (convertida pra WebP com alfa: preto → transparente)
 p1-veiculo 2016/05/05/18/01/coupe-1374441
 p2-diagnostico 2018/09/20/22/23/auto-repair-3691963
 p4-servico 2017/01/05/10/38/auto-repair-1954636

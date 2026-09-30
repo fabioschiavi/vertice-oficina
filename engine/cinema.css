@@ -27,7 +27,6 @@ a { color: inherit; text-decoration: none; }
 .display { font-family: var(--font-display); letter-spacing: var(--display-track); }
 
 #gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
-/* sem z-index no main: .hero-photo (mix-blend-mode) precisa misturar com o #gl */
 main, .footer { position: relative; }
 .sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
 .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 10px var(--accent-2); }
@@ -62,8 +61,10 @@ main, .footer { position: relative; }
 .scroll-hint { display: flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-2); }
 .scroll-hint i { width: 1px; height: 44px; background: linear-gradient(var(--ink), transparent); animation: nfx-hint 2.2s var(--ease) infinite; transform-origin: top; }
 @keyframes nfx-hint { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
-/* foto de apoio opcional: clareia sobre o canvas sem esconder o objeto 3D */
-.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: lighten; pointer-events: none; }
+/* foto de apoio opcional: use imagem com ALFA (preto → transparente, ex. WebP/PNG). Não use
+   mix-blend-mode: Safari/iOS (e o navegador do Instagram) não mistura com o canvas WebGL e mostra
+   a foto com fundo preto por cima do objeto 3D. */
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 
 /* ---------- 2 · painel ---------- */
 .intro { height: 300vh; }

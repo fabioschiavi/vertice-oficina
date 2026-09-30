@@ -1,6 +1,6 @@
 /* VÉRTICE — conteúdo da adaptação: roda de carro 3D + fotos reais (Pixabay). */
-import { runCinema } from "./engine/cinema.js";
-import { wheelHero } from "./engine/heroes.js";
+import { runCinema } from "./engine/cinema.js?v=5";
+import { wheelHero } from "./engine/heroes.js?v=5";
 
 /* ícone da marca: aro + 9 pás curvas (mesma linguagem do rotor 3D) */
 {
