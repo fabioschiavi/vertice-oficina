@@ -53,6 +53,6 @@ runCinema({
   glowStrength: 0.6,
   exposure: 1.1,
   hero: wheelHero({ caliper: 0xf08058 }),
-  heroScale: { panelMobile: 0.28, panelMobileY: 0.3 },
+  heroScale: { panelMobile: 0.28, panelMobileY: 0.42 }, // a câmera mira 35% no objeto: desce mais pra ficar abaixo dos botões
   cards: CARDS,
 });
