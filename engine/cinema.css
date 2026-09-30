@@ -141,7 +141,9 @@ main, .footer { position: relative; }
   .dv-sheet { border-radius: 24px 24px 0 0; }
   .phone { --w: 42vw; }
   .bloom-side { display: none; }
-  .st-note { top: auto; bottom: 34vh; max-width: 70vw; }
-  .g-head { font-size: 11vw; }
+  .st-note { top: auto; bottom: 24vh; max-width: 70vw; }
+  .g-head { font-size: 12vw; white-space: normal; width: 88vw; text-align: center; line-height: 1; }
+  .nav-cta { padding: 12px 16px; }
+  .footer nav a { display: inline-block; padding: 13px 0; }
 }
 @media (prefers-reduced-motion: reduce) { .scroll-hint i { animation: none; } }

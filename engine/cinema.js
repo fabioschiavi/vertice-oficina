@@ -67,7 +67,7 @@ export function runCinema(config) {
     exposure: 1.05,
     glowStrength: 1,
     ...config,
-    heroScale: { panel: 0.62, panelMobile: 0.5, curtain: 0.55, bloom: 0.72, final: 1.15, finalMobile: 0.62, ...config.heroScale },
+    heroScale: { panel: 0.62, panelMobile: 0.5, panelMobileY: 0.2, curtain: 0.55, bloom: 0.72, final: 1.15, finalMobile: 0.62, ...config.heroScale },
   };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -433,10 +433,11 @@ export function runCinema(config) {
 
     // --- objeto herói
     const camZ0 = 6.5, hVis = visibleH(camZ0), wVis = hVis * aspect;
-    const panelPos = mob ? tmp.set(0, -hVis * 0.2, 0) : tmp.set(wVis * 0.22, -0.1, 0);
+    const panelPos = mob ? tmp.set(0, -hVis * HS.panelMobileY, 0) : tmp.set(wVis * 0.22, -0.1, 0);
     const toPanel = sm(heroK) * (1 - sm(seg(dvP, 0.5, 0.8)));
     heroG.position.copy(panelPos).multiplyScalar(toPanel);
-    let hs = lerp(1, mob ? HS.panelMobile : HS.panel, toPanel);
+    const fit = Math.min(1, (wVis * 0.8) / (2 * HERO_R)); // no celular em pé o objeto cabe na largura
+    let hs = lerp(fit, mob ? HS.panelMobile : HS.panel, toPanel);
     if (dvP > 0.5) hs = lerp(hs, HS.curtain, sm(seg(dvP, 0.5, 0.8)));
     hs = lerp(hs, HS.bloom, sm(seg(blT, 0.1, 0.7)));
 

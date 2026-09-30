@@ -53,5 +53,6 @@ runCinema({
   glowStrength: 0.6,
   exposure: 1.1,
   hero: wheelHero({ caliper: 0xf08058 }),
+  heroScale: { panelMobile: 0.28, panelMobileY: 0.3 },
   cards: CARDS,
 });
